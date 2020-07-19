@@ -132,7 +132,9 @@ def listar_prestadores():
     prestadores = CadastroPrestador.query.all()
     return render_template("listar_prestadores.html", prestadores=prestadores)
 
-
+@app.route("/gerar_recibos")
+def gerar_recibos():
+    return render_template("gerar_recibos.html")
 
 
 if __name__ == "__main__":

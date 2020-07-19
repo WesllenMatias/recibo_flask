@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <title>Recibo</title>
+    <title>Gerar Recibos</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,20 +10,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <h1>RECIBOS</h1>
-    <hr>
-    <a href="{{ url_for('cadastro_empresa') }}">Cadastrar Empresa</a>
-    <br>
-    <a href="{{ url_for('listar_empresas') }}">Listar Empresas</a>
-    <br>
-    <a href="{{ url_for('cadastro_prestador') }}">Cadastrar Prestador de Serviços</a>
-    <br>
-    <a href="{{ url_for('listar_prestadores') }}">Listar Prestadores</a>
-    <br>
-    <a href="{{ url_for('gerar_recibos') }}">Gerar Recibo</a>
-    <br>
-    <a href="#">Listar Recibos</a>
-    <br>
+      <form>
+        <h1>Gerar Recibos</h1>
+        <table>
+          <tr>
+            <td>Serviço: </td>
+            <td><input type="text" name="servico"></td>
+          </tr>
+          <tr>
+            <td>Valor Bruto: </td>
+            <td><input type="number" name="valor_bruto" id=""></td>
+          </tr>
+          <tr>
+            <td>Valor Liquido: </td>
+            <td><input type="text" name="valor_liquido" id=""></td>
+          </tr>
+          <tr>
+            <td>PIS: </td>
+            <td><input type="text" name="pis" id=""></td>
+          </tr>
+          <tr>
+            <td>INSS: </td>
+            <td><input type="text" name="inss" id=""></td>
+          </tr>
+          <tr>
+            <td>IRRF: </td>
+            <td><input type="text" name="irrf" id=""></td>
+          </tr>
+          <tr>
+            <td>ISS: </td>
+            <td><input type="text" name="iss" id=""></td>
+          </tr>
+        </table>
+      </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
