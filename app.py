@@ -136,6 +136,22 @@ def listar_prestadores():
 def gerar_recibos():
     return render_template("gerar_recibos.html")
 
+@app.route("/get_recibo",methods=['GET','POST'])
+def get_recibo():
+    if request.method == 'POST':
+        servico = request.form.get("servico")
+        valor_bruto = request.form.get("valor_bruto")
+        valor_liquido = request.form.get("valor_liquido")
+        pis = request.form.get("pis")
+        inss = request.form.get("inss")
+        irrf = request.form.get("irrf")
+        iss = request.form.get("iss")
+        recibo_pdf = request.form.get("recibo_pdf")
+
+        if servico and valor_bruto and valor_liquido and pis and inss and irrf and iss and recibo_pdf:
+            g_recibo = Recibos(servico,valor_bruto,valor_liquido,pis,inss,irrf,iss,recibo)
+            db.session.add(g_recibo)
+            db.commit()
 
 if __name__ == "__main__":
     app.run(debug=True)
