@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+    <h1>Cadastro de Empresa</h1>
     <form action="{{ url_for('get_empresa') }}" method="POST">
-        <h1>Cadastro de Empresa</h1>
-        <hr>
+        <table>
             <tr>
                 <td>Empresa:</td>
                 <td><input type="text" name="empresa"></td>
@@ -35,10 +35,9 @@
             <br>
             <tr>
                 <td><button type="submit">Salvar</button></td>
-                <td><button type="reset">Cancelar</button></td>
-            <td><input type="button" value="Voltar" onclick="history.go(-1)"></td>
+                <td><input type="button" value="Cancelar" onclick="history.go(-1)"></td>
             </tr>
-        <br>
+          </table>
     </form>
       <hr>
     <!-- Optional JavaScript -->

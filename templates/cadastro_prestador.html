@@ -12,6 +12,7 @@
   <body>
         <h1>Cadastro Prestador de Serviço</h1>
         <hr>
+        <table>
         <form action="{{ url_for('get_prestador') }}" method="POST">
             <tr>
                 <td>Nome Completo:</td>
@@ -57,6 +58,7 @@
                 <td><input type="submit" Value="Salvar"></td>
                 <td><input type="button" value="Cancelar" onclick="history.go(-1)"></td>
             </tr>
+            </table>
             <br>
         </form>
       <hr>
